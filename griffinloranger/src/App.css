@@ -1,29 +1,62 @@
 .App {
   font-family: Arial, sans-serif;
-  margin: 0 auto;
-  max-width: 800px;
-  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
 
 .App-header {
   background-color: #282c34;
   color: white;
-  padding: 20px 0;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
+
+.full-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* align text to the left */
+  padding-left: 50px; /* add buffer from the left edge */
+}
+
 
 main {
-  margin: 20px 0;
+  flex: 1;
+  margin-top: 60px; /* Adjusts for the fixed header */
 }
 
-h2 {
-  border-bottom: 2px solid #282c34;
-  padding-bottom: 10px;
+
+.cv-link, .name-link {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  padding-right: 2%; /* space from the right edge */
 }
 
 footer {
-  border-top: 2px solid #282c34;
-  margin-top: 20px;
-  padding-top: 10px;
+  background-color: #282c34;
+  color: white;
+  padding: 10px 0;
   text-align: center;
+  width: 100%;
+}
+
+
+h2 {
+  margin-top: -50px; /* adjust this value for desired effect */
+  padding-top: 50px;
+  border-bottom: 2px solid #282c34;
+}
+
+.intro-section {
+  align-items: center;
 }
